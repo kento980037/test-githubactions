@@ -5,3 +5,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: echo "hello world"
+      - uses: actions/checkout@v2
+      - run: | 
+          pwd
+          ls -a
+          # GitHub環境変数
+          echo $GITHUB_SHA
+          echo $GITHUB_REPOSITORY
+          echo $GITHUB_WORKSPACE
